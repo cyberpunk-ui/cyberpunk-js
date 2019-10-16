@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <title>Tab组件</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cyberpunk UI - Tab组件</title>
     <style>
-        .tabs ul,ol,li {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
+      .tabs ul,
+      ol,
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
 
-        .tabs .tabs-title,
-        .tabs .tabs-content {
-            display: flex;
-        }
+      .tabs .tabs-nav,
+      .tabs .tabs-content {
+        display: flex;
+      }
 
-        .tabs .tabs-title {
-            border-bottom: 1px solid grey;
-        }
+      .tabs .tabs-nav {
+        border-bottom: 1px solid grey;
+      }
 
-        .tabs .tabs-title li {
-            padding: 10px;
-            cursor: pointer;
-            border: 1px solid transparent;
-            border-bottom: 0;
-        }
+      .tabs .tabs-nav li {
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-bottom: 0;
+      }
 
-        .tabs .tabs-title li:hover {
-            border: 1px solid red;
-            border-bottom: 0;
-        }
+      .tabs .tabs-nav li:hover {
+        border: 1px solid red;
+        border-bottom: 0;
+      }
 
-        .tabs .tabs-title li.active {
-            border: 1px solid green;
-            border-bottom: 0;
-        }
+      .tabs .tabs-nav li.active {
+        border: 1px solid green;
+        border-bottom: 0;
+      }
 
-        .tabs .tabs-content li {
-            padding: 10px;
-            border: 1px solid rgba(0,0,0,.1);
-            border-top: 0;
-            width: 100%;
-        }
+      .tabs .tabs-panes li {
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: 0;
+        width: 100%;
+        display: none;
+      }
+
+      .tabs .tabs-panes li.active {
+        display: block;
+      }
     </style>
-</head>
-<body>
-<div class="tabs">
-    <ol class="tabs-title">
+  </head>
+  <body>
+    <div class="tabs">
+      <ol class="tabs-nav">
         <li>1</li>
         <li>2</li>
         <li>3</li>
-    </ol>
-    <ol class="tabs-content">
+      </ol>
+      <ol class="tabs-panes">
         <li>11</li>
-        <li style="display: none">22</li>
-        <li style="display: none">33</li>
-    </ol>
-    <!-- http://js.jirengu.com/lufuzadili/19/edit -->
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <li>22</li>
+        <li>33</li>
+      </ol>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../lib/jQuery/Tabs/index.js"></script>
-    <script>
-        new Tabs({
-            element: '.tabs',
-            initTab: 0,
-        })
-    </script>
-</div>
-</body>
+  </body>
 </html>
